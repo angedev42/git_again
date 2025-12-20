@@ -1,1 +1,188 @@
-/* style */
+body {
+  margin: 0;
+  background: #f6f6f6;
+  font-family: "Noto", sans-serif;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 24px;
+  padding: 40px;
+  max-width: 1800px;
+  margin: auto;
+}
+
+/* Chaque colonne peut être décalée manuellement */
+.col:nth-child(1) { margin-top: 40px; }
+.col:nth-child(2) { margin-top: 0px; }
+.col:nth-child(3) { margin-top: 60px; }
+.col:nth-child(4) { margin-top: 20px; }
+.col:nth-child(5) { margin-top: 70px; }
+.col:nth-child(6) { margin-top: 10px; }
+.col:nth-child(7) { margin-top: 50px; }
+.col:nth-child(8) { margin-top: 0px; }
+
+/* Images */
+.col img {
+  width: 100%;
+  height: 280px;           /* même hauteur visuelle : réglable */
+  object-fit: cover;       /* recadrage propre */
+  border-radius: 18px;
+  display: block;
+  margin-bottom: 24px;
+}
+
+/* Option : rendre les hauteurs variées pour reproduire ton collage */
+.col img:nth-child(1) { height: 340px; }
+.col img:nth-child(2) { height: 250px; }
+.col img:nth-child(3) { height: 310px; }
+
+/* HEADER */
+#header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* IMAGE DE FOND */
+.background-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -1;
+  opacity: 0.2; /* entre 0 et 1 */
+}
+
+/* IMAGES SELON LES PAGES */
+.bi-english {
+  background-image: url("https://res.cloudinary.com/devo1mvlr/image/upload/v1764263970/pexels-photo-460672_izrddz.jpg");
+}
+
+.bi-russian {
+  background-image: url("https://img.freepik.com/photos-premium/matin-hiver-brumeux-givre-place-rouge-moscou-dans-decorations-noel-cathedrale-stbasils_337751-543.jpg");
+}
+
+.bi-USA {
+  background-image: url("https://www.petitfute.com/medias/mag/25404/originale/AdobeStock_238035886-1024x639.jpeg");
+}
+
+.bi-polish {
+  background-image: url("https://media.istockphoto.com/id/1927428179/fr/photo/l%C3%A9t%C3%A9-%C3%A0-wroclaw.jpg?s=612x612&w=0&k=20&c=so21ndUs10k7bbnHwC1p6tnhwDEomucDiR18XyV2pEE=");
+}
+
+.bi-german {
+  background-image: url("https://media.istockphoto.com/id/619638736/fr/photo/ville-historique-de-rothenburg-ob-der-tauber-franconia-bavi%C3%A8re-allemagne.jpg?s=612x612&w=0&k=20&c=8EzWbA6rcCI1qudoLo-lp1auKY6fF41BhHbmnLWBB2Y=");
+}
+
+.bi-portuguese {
+  background-image: url("https://res.cloudinary.com/cdn-connections/image/upload/c_limit,w_3840/f_auto/q_auto:best/v1637670546/Destinations/Europe/Portugal/Camilo_Beach_Algarve?_a=BAVAZGBy0");
+}
+
+.bi-french {
+  background-image: url("https://images.pexels.com/photos/18511571/pexels-photo-18511571.jpeg?cs=srgb&dl=pexels-peederopecta-18511571.jpg&fm=jpg");
+}
+
+.bi-spain {
+  background-image: url("https://media.istockphoto.com/id/802912258/fr/photo/plaza-de-espana-s%C3%A9ville-andalousie-espagne.jpg?s=612x612&w=0&k=20&c=PZ4tqY3mLLbseIFrupDriE_VeVQKxnjdaEvP9-4-044=");
+}
+
+.bi-serbian {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/43/Golubac.JPG");
+}
+
+.bi-dutch {
+  background-image: url("https://media.istockphoto.com/id/937057490/fr/photo/des-moulins-%C3%A0-vent-traditionnels-hollandais-et-maisons-proche-du-canal-%C3%A0-zaanstad-village.jpg?s=612x612&w=0&k=20&c=TPz6L55Z96hJvZmC6M7SkaqUkGAqdcL5EykGgUSdOoE=");
+}
+
+  /* CONTENU CENTRÉ */
+.overlay-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+/* BOUTON */
+.btn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: #ffffff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+
+/* Conteneur du logo */
+.logo-container {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Logo */
+.logo {
+  width: 70px;
+  height: 40px;
+  object-fit: cover;
+}
+
+/* Boutons */
+.menu {
+    place-self: center;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 1.5rem;
+  border: solid 2px;
+  border-color: #13033b;
+  background-color: rgb(255, 255, 255);
+  color: #13033b;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  font-family: inherit;
+}
+
+.btn:hover {
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 1.6rem;
+  background-color: #13033b;
+}
+
+h1{
+  color: #13033b;
+  font-size: 100px;
+  font-family: "Noto", sans-serif;
+  font-style: normal;
+}
+
+img {
+  display: block;
+}
+
+.drapeau {
+  max-width: 100px;
+}
+
+.contener-drapeau{
+  margin: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
